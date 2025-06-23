@@ -9,6 +9,50 @@ declare global {
   }
 }
 
+// SVG Icons
+const PlayIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+    <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+  </svg>
+);
+
+const PauseIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+    <path fillRule="evenodd" d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0A.75.75 0 0115 4.5h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H15a.75.75 0 01-.75-.75V5.25z" clipRule="evenodd" />
+  </svg>
+);
+
+const PreviousIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+    <path d="M9.195 18.44c1.25.713 2.805-.19 2.805-1.629v-2.34l6.945 3.968c1.25.714 2.805-.188 2.805-1.628V8.688c0-1.44-1.555-2.342-2.805-1.628L12 11.03v-2.34c0-1.44-1.555-2.343-2.805-1.629l-7.108 4.062c-1.26.72-1.26 2.536 0 3.256l7.108 4.061z" />
+  </svg>
+);
+
+const NextIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+    <path d="M5.055 7.06c-1.25-.714-2.805.189-2.805 1.628v8.123c0 1.44 1.555 2.342 2.805 1.628L12 14.471v2.34c0 1.44 1.555 2.342 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256L14.805 7.06C13.555 6.346 12 7.25 12 8.688v2.34L5.055 7.06z" />
+  </svg>
+);
+
+const VolumeUpIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+    <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM18.584 5.106a.75.75 0 011.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 11-1.06-1.06 8.25 8.25 0 000-11.668.75.75 0 010-1.06z" />
+    <path d="M15.932 7.757a.75.75 0 011.061 0 6 6 0 010 8.486.75.75 0 01-1.06-1.061 4.5 4.5 0 000-6.364.75.75 0 010-1.06z" />
+  </svg>
+);
+
+const VolumeOffIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+    <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM17.78 9.22a.75.75 0 10-1.06 1.06L18.44 12l-1.72 1.72a.75.75 0 001.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 101.06-1.06L20.56 12l1.72-1.72a.75.75 0 00-1.06-1.06l-1.72 1.72-1.72-1.72z" />
+  </svg>
+);
+
+const PlaylistIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+    <path d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z" />
+  </svg>
+);
+
 export default function YouTubePlayer() {
   const [player, setPlayer] = useState<any>(null);
   const [playerState, setPlayerState] = useState(-1);
@@ -21,10 +65,38 @@ export default function YouTubePlayer() {
   const [duration, setDuration] = useState(0);
   const [playlistId, setPlaylistId] = useState(process.env.NEXT_PUBLIC_PLAYLIST_ID || '');
   const [isEditingPlaylist, setIsEditingPlaylist] = useState(false);
+  const [playlistItems, setPlaylistItems] = useState<any[]>([]);
+  const [showPlaylist, setShowPlaylist] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   const playerContainerRef = useRef<HTMLDivElement>(null);
   const youtubeScriptRef = useRef<HTMLScriptElement | null>(null);
   const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const mainRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const fetchPlaylistItems = async () => {
+      if (!playlistId) return;
+      try {
+        const response = await fetch(`/api/yt-playlist?playlistId=${playlistId}`);
+        const data = await response.json();
+        setPlaylistItems(data.items);
+      } catch (error) {
+        console.error('Failed to fetch playlist items:', error);
+      }
+    };
+
+    fetchPlaylistItems();
+  }, [playlistId]);
 
   useEffect(() => {
     const loadYouTubeAPI = () => {
@@ -70,11 +142,8 @@ export default function YouTubePlayer() {
               setIsMuted(p.isMuted());
               p.playVideo();
               setNeedsInteraction(false);
-
-              // Start progress tracking
               startProgressTracking(p);
             } catch {
-              console.log('Autoplay blocked. Awaiting user interaction.');
               setNeedsInteraction(true);
             }
           },
@@ -84,13 +153,7 @@ export default function YouTubePlayer() {
               setTitle(event.target.getVideoData().title);
               setDuration(event.target.getDuration());
               startProgressTracking(event.target);
-            } else if (event.data === 0) {
-              // Video ended
-              if (progressIntervalRef.current) {
-                clearInterval(progressIntervalRef.current);
-              }
-            } else if (event.data === 2) {
-              // Paused
+            } else {
               if (progressIntervalRef.current) {
                 clearInterval(progressIntervalRef.current);
               }
@@ -132,71 +195,10 @@ export default function YouTubePlayer() {
     };
   }, [playlistId]);
 
-  useEffect(() => {
-    if (player && typeof player.setVolume === 'function') {
-      player.setVolume(volume);
-    }
-
-    if (player && typeof player.isMuted === 'function') {
-      const currentlyMuted = player.isMuted();
-      if (volume > 0 && currentlyMuted) {
-        player.unMute();
-        setIsMuted(false);
-      } else if (volume === 0 && !currentlyMuted) {
-        player.mute();
-        setIsMuted(true);
-      }
-    }
-  }, [volume, player]);
-
-  const handlePlay = () => {
-    if (player?.playVideo) {
-      player.playVideo();
-      //startProgressTracking(player);
-      setNeedsInteraction(false);
-    }
-  };
-
-  const togglePlay = () => {
-    if (!player) return;
-    if (playerState === 1) {
-      player.pauseVideo();
-      if (progressIntervalRef.current) {
-        clearInterval(progressIntervalRef.current);
-      }
-    } else {
-      player.playVideo();
-      //startProgressTracking(player);
-    }
-  };
-
-  const toggleMute = () => {
-    if (!player) return;
-
-    if (isMuted) {
-      player.unMute();
-      setIsMuted(false);
-    } else {
-      player.mute();
-      setIsMuted(true);
-    }
-  };
-
-  const handleNext = () => {
-    player?.nextVideo?.();
-    //startProgressTracking(player);
-  };
-
-  const handlePrevious = () => {
-    player?.previousVideo?.();
-    //startProgressTracking(player);
-  };
-
-  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newTime = parseFloat(e.target.value);
-    setCurrentTime(newTime);
-    if (player && typeof player.seekTo === 'function') {
-      player.seekTo(newTime, true);
+  const playVideoByIndex = (index: number) => {
+    if (player && typeof player.playVideoAt === 'function') {
+      player.playVideoAt(index);
+      setShowPlaylist(false);
     }
   };
 
@@ -206,162 +208,130 @@ export default function YouTubePlayer() {
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
   };
 
-  const handlePlaylistIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPlaylistId(e.target.value);
-  };
-
-  const handlePlaylistSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsEditingPlaylist(false);
-    // The useEffect with playlistId dependency will handle the player reinitialization
-  };
+  // Calculate background color based on scroll position
+  const bgOpacity = Math.min(scrollY / 200, 0.2);
+  const bgColor = `rgba(255, 255, 255, ${bgOpacity})`;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div 
+      ref={mainRef}
+      className="min-h-screen flex items-center justify-center px-4 py-10 transition-colors duration-300"
+      style={{
+        background: `linear-gradient(to bottom, rgba(249, 250, 251, 1) 0%, rgba(249, 250, 251, ${1 - bgOpacity}) 100%)`
+      }}
+    >
       <div ref={playerContainerRef} className="hidden" />
 
-      <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow-xl max-w-md w-full">
-        <div className="flex justify-between items-start mb-4">
-          <h1 className="text-xl font-bold text-indigo-900">Youtube Player</h1>
-          {isEditingPlaylist ? (
-            <form onSubmit={handlePlaylistSubmit} className="flex items-center">
-              <input
-                type="text"
-                value={playlistId}
-                onChange={handlePlaylistIdChange}
-                className="text-xs p-1 border rounded mr-2 w-32"
-                placeholder="Playlist ID"
-              />
-              <button type="submit" className="text-xs bg-indigo-600 text-white px-2 py-1 rounded">
-                Save
-              </button>
-            </form>
-          ) : (
-            <button
-              onClick={() => setIsEditingPlaylist(true)}
-              className="text-xs text-indigo-600 hover:text-indigo-800"
-              title="Edit playlist"
-            >
-              {playlistId ? `${playlistId.substring(0, 6)}...` : 'Set Playlist'}
-            </button>
-          )}
+      <div className={`bg-white bg-opacity-90 p-6 rounded-xl shadow-lg w-full max-w-md border border-gray-200 transition-all duration-300 ${scrollY > 50 ? 'shadow-xl' : 'shadow-md'}`}>
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-xl font-bold text-gray-800">YouTube Player</h1>
+          <button 
+            onClick={() => setShowPlaylist(!showPlaylist)} 
+            className="flex items-center gap-1 text-sm text-indigo-600 hover:text-indigo-800 transition-colors"
+          >
+            <PlaylistIcon />
+            <span>{showPlaylist ? 'Hide' : 'Show'} List</span>
+          </button>
         </div>
 
-        {needsInteraction ? (
-          <div className="text-center space-y-6 py-8">
-            <div className="mx-auto w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.728-2.728" />
-              </svg>
-            </div>
-            <button
-              onClick={handlePlay}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all flex items-center mx-auto"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-              </svg>
-              Start Playback
-            </button>
-          </div>
-        ) : (
-          <>
-            <h2 className="text-lg font-medium mb-4 truncate text-gray-800">
-              {title}
-            </h2>
-
-            {/* Progress bar */}
-            <div className="mb-6">
-              <input
-                type="range"
-                min="0"
-                max={duration || 100}
-                value={currentTime}
-                onChange={handleSeek}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-              />
-              <div className="flex justify-between text-xs text-gray-500 mt-1">
-                <span>{formatTime(currentTime)}</span>
-                <span>{formatTime(duration)}</span>
+        {showPlaylist && (
+          <div className="mb-6 max-h-60 overflow-y-auto rounded-lg bg-gray-50 border border-gray-200 shadow-inner">
+            {playlistItems.map((item, index) => (
+              <div key={item.id} className="border-b border-gray-200 last:border-b-0 hover:bg-gray-100 transition-colors">
+                <button
+                  onClick={() => playVideoByIndex(index)}
+                  className="block w-full text-left px-4 py-3 text-sm text-gray-700 truncate"
+                >
+                  {item.title}
+                </button>
               </div>
-            </div>
-
-            <div className="flex justify-center items-center gap-6 mb-8">
-              <button
-                onClick={handlePrevious}
-                aria-label="Previous track"
-                className="p-2 rounded-full hover:bg-indigo-100 text-indigo-700"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
-                </svg>
-              </button>
-              <button
-                onClick={togglePlay}
-                aria-label="Play/Pause"
-                className="p-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white"
-              >
-                {playerState === 1 ? (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ) : (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                )}
-              </button>
-              <button
-                onClick={handleNext}
-                aria-label="Next track"
-                className="p-2 rounded-full hover:bg-indigo-100 text-indigo-700"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <button
-                onClick={toggleMute}
-                aria-label={isMuted ? 'Unmute' : 'Mute'}
-                className="p-2 rounded-full hover:bg-indigo-100 text-indigo-700"
-              >
-                {isMuted ? (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clipRule="evenodd" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                ) : (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M12 6a7.975 7.975 0 015.657 2.343m0 0a7.975 7.975 0 010 11.314m-11.314 0a7.975 7.975 0 010-11.314m0 0a7.975 7.975 0 015.657-2.343" />
-                  </svg>
-                )}
-              </button>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value={volume}
-                onChange={(e) => setVolume(Number(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-              />
-            </div>
-            <div className="mt-8 text-center text-sm text-gray-500">
-              Made with ❤️ by{' '}
-              <a
-                href="https://bhargav-rathod.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 hover:text-indigo-800 hover:underline transition-colors"
-              >
-                Bhargav Rathod
-              </a>
-            </div>
-          </>
+            ))}
+          </div>
         )}
+
+        <div className="mb-6">
+          <h2 className="text-lg font-medium text-gray-800 mb-2 truncate">{title}</h2>
+          <div className="h-2 w-full bg-gray-200 rounded-full mb-1 overflow-hidden">
+            <div 
+              className="h-full bg-indigo-500 rounded-full transition-all duration-300" 
+              style={{ width: duration ? `${(currentTime / duration) * 100}%` : '0%' }}
+            />
+          </div>
+          <div className="flex justify-between text-xs text-gray-500">
+            <span>{formatTime(currentTime)}</span>
+            <span>{formatTime(duration)}</span>
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center gap-4 mb-6">
+          <button 
+            onClick={() => player?.previousVideo?.()} 
+            className="p-3 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-full transition-colors"
+            aria-label="Previous"
+          >
+            <PreviousIcon />
+          </button>
+          <button 
+            onClick={() => playerState === 1 ? player?.pauseVideo?.() : player?.playVideo?.()} 
+            className="p-4 bg-indigo-600 text-white hover:bg-indigo-700 rounded-full transition-colors shadow-md hover:shadow-lg"
+            aria-label={playerState === 1 ? 'Pause' : 'Play'}
+          >
+            {playerState === 1 ? <PauseIcon /> : <PlayIcon />}
+          </button>
+          <button 
+            onClick={() => player?.nextVideo?.()} 
+            className="p-3 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-full transition-colors"
+            aria-label="Next"
+          >
+            <NextIcon />
+          </button>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <button 
+            onClick={() => {
+              if (isMuted) {
+                player?.unMute?.();
+                setIsMuted(false);
+              } else {
+                player?.mute?.();
+                setIsMuted(true);
+              }
+            }} 
+            className="p-2 text-gray-600 hover:text-indigo-600 transition-colors"
+            aria-label={isMuted ? 'Unmute' : 'Mute'}
+          >
+            {isMuted ? <VolumeOffIcon /> : <VolumeUpIcon />}
+          </button>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value={volume}
+            onChange={(e) => {
+              const newVolume = Number(e.target.value);
+              setVolume(newVolume);
+              player?.setVolume?.(newVolume);
+              if (isMuted && newVolume > 0) {
+                setIsMuted(false);
+                player?.unMute?.();
+              }
+            }}
+            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+          />
+        </div>
+
+        <div className="mt-8 text-center text-sm text-gray-500">
+          Made with <span className="text-red-500">❤️</span> by{' '}
+          <a
+            href="https://bhargav-rathod.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:underline transition-colors"
+          >
+            Bhargav Rathod
+          </a>
+        </div>
       </div>
     </div>
   );
