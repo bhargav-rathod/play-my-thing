@@ -213,7 +213,7 @@ export default function YouTubePlayer() {
   const bgColor = `rgba(255, 255, 255, ${bgOpacity})`;
 
   return (
-    <div 
+    <div
       ref={mainRef}
       className="min-h-screen flex items-center justify-center px-4 py-10 transition-colors duration-300"
       style={{
@@ -225,8 +225,8 @@ export default function YouTubePlayer() {
       <div className={`bg-white bg-opacity-90 p-6 rounded-xl shadow-lg w-full max-w-md border border-gray-200 transition-all duration-300 ${scrollY > 50 ? 'shadow-xl' : 'shadow-md'}`}>
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-xl font-bold text-gray-800">YouTube Player</h1>
-          <button 
-            onClick={() => setShowPlaylist(!showPlaylist)} 
+          <button
+            onClick={() => setShowPlaylist(!showPlaylist)}
             className="flex items-center gap-1 text-sm text-indigo-600 hover:text-indigo-800 transition-colors"
           >
             <PlaylistIcon />
@@ -250,10 +250,15 @@ export default function YouTubePlayer() {
         )}
 
         <div className="mb-6">
-          <h2 className="text-lg font-medium text-gray-800 mb-2 truncate">{title}</h2>
+          <div className="overflow-x-hidden whitespace-nowrap mb-2">
+            <h2 className="text-lg font-medium text-gray-800 inline-block px-1 animate-marquee">
+              {title}
+            </h2>
+          </div>
+          <br/>
           <div className="h-2 w-full bg-gray-200 rounded-full mb-1 overflow-hidden">
-            <div 
-              className="h-full bg-indigo-500 rounded-full transition-all duration-300" 
+            <div
+              className="h-full bg-indigo-500 rounded-full transition-all duration-300"
               style={{ width: duration ? `${(currentTime / duration) * 100}%` : '0%' }}
             />
           </div>
@@ -264,22 +269,22 @@ export default function YouTubePlayer() {
         </div>
 
         <div className="flex justify-center items-center gap-4 mb-6">
-          <button 
-            onClick={() => player?.previousVideo?.()} 
+          <button
+            onClick={() => player?.previousVideo?.()}
             className="p-3 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-full transition-colors"
             aria-label="Previous"
           >
             <PreviousIcon />
           </button>
-          <button 
-            onClick={() => playerState === 1 ? player?.pauseVideo?.() : player?.playVideo?.()} 
+          <button
+            onClick={() => playerState === 1 ? player?.pauseVideo?.() : player?.playVideo?.()}
             className="p-4 bg-indigo-600 text-white hover:bg-indigo-700 rounded-full transition-colors shadow-md hover:shadow-lg"
             aria-label={playerState === 1 ? 'Pause' : 'Play'}
           >
             {playerState === 1 ? <PauseIcon /> : <PlayIcon />}
           </button>
-          <button 
-            onClick={() => player?.nextVideo?.()} 
+          <button
+            onClick={() => player?.nextVideo?.()}
             className="p-3 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-full transition-colors"
             aria-label="Next"
           >
@@ -288,7 +293,7 @@ export default function YouTubePlayer() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button 
+          <button
             onClick={() => {
               if (isMuted) {
                 player?.unMute?.();
@@ -297,7 +302,7 @@ export default function YouTubePlayer() {
                 player?.mute?.();
                 setIsMuted(true);
               }
-            }} 
+            }}
             className="p-2 text-gray-600 hover:text-indigo-600 transition-colors"
             aria-label={isMuted ? 'Unmute' : 'Mute'}
           >
