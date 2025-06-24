@@ -256,12 +256,23 @@ export default function YouTubePlayer() {
             </h2>
           </div>
           <br />
-          <div className="h-2 w-full bg-purple-100 rounded-full mb-1 overflow-hidden">
-            <div
-              className="h-full bg-purple-500 rounded-full transition-all duration-300"
-              style={{ width: duration ? `${(currentTime / duration) * 100}%` : '0%' }}
-            />
-          </div>
+          <input
+            type="range"
+            min="0"
+            max={duration}
+            value={currentTime}
+            onChange={(e) => {
+              const newTime = parseFloat(e.target.value);
+              setCurrentTime(newTime);
+              player?.seekTo?.(newTime, true);
+            }}
+            className="w-full h-2 bg-purple-100 rounded-full cursor-pointer range-thumb"
+            style={{
+              background: `linear-gradient(to right, #d946ef ${(currentTime / duration) * 100}%, #e0d4f7 ${(currentTime / duration) * 100}%)`
+            }}
+          />
+
+
           <div className="flex justify-between text-xs text-purple-600 font-mono">
             <span>{formatTime(currentTime)}</span>
             <span>{formatTime(duration)}</span>
