@@ -224,13 +224,13 @@ export default function YouTubePlayer() {
 
       <div className={`backdrop-blur-md bg-white/60 p-6 rounded-3xl shadow-xl w-full max-w-md border border-white/30 transition-all duration-500 ${scrollY > 50 ? 'shadow-2xl' : 'shadow-md'}`}>
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-xl font-bold text-purple-800 tracking-wide">YouTube Player</h1>
+          <h1 className="text-xl font-bold text-purple-800 tracking-wide">Mini YouTube Player</h1>
           <button
             onClick={() => setShowPlaylist(!showPlaylist)}
             className="flex items-center gap-1 text-sm text-purple-600 hover:text-purple-800 transition-colors"
           >
             <PlaylistIcon />
-            <span>{showPlaylist ? 'Hide' : 'Show'} List</span>
+            <span>{showPlaylist ? 'Hide' : 'Show'}</span>
           </button>
         </div>
 
@@ -326,7 +326,13 @@ export default function YouTubePlayer() {
           />
         </div>
 
-        <div className="mt-8 text-center text-xs text-purple-600">
+        <div className="mt-6 text-center text-xs text-purple-600">
+          <div className="mb-2 text-[0.55rem]">
+            Playing from: <span className="font-mono bg-white/30 px-1 py-1 rounded">{playlistId} (Playlist Id)</span>
+          </div>
+        </div>
+
+        <div className="mt-6 text-center text-xs text-purple-600">
           Made with <span className="text-red-400">❤️</span> by{' '}
           <a
             href="https://bhargav-rathod.netlify.app"
