@@ -215,19 +215,19 @@ export default function YouTubePlayer() {
   return (
     <div
       ref={mainRef}
-      className="min-h-screen flex items-center justify-center px-4 py-10 transition-colors duration-300"
+      className="min-h-screen flex items-center justify-center px-4 py-10 transition-all duration-500 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100"
       style={{
-        background: `linear-gradient(to bottom, rgba(249, 250, 251, 1) 0%, rgba(249, 250, 251, ${1 - bgOpacity}) 100%)`
+        background: `linear-gradient(to bottom right, rgba(255, 240, 245, 0.7), rgba(240, 248, 255, 0.7))`
       }}
     >
       <div ref={playerContainerRef} className="hidden" />
 
-      <div className={`bg-white bg-opacity-90 p-6 rounded-xl shadow-lg w-full max-w-md border border-gray-200 transition-all duration-300 ${scrollY > 50 ? 'shadow-xl' : 'shadow-md'}`}>
+      <div className={`backdrop-blur-md bg-white/60 p-6 rounded-3xl shadow-xl w-full max-w-md border border-white/30 transition-all duration-500 ${scrollY > 50 ? 'shadow-2xl' : 'shadow-md'}`}>
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-xl font-bold text-gray-800">YouTube Player</h1>
+          <h1 className="text-xl font-bold text-purple-800 tracking-wide">YouTube Player</h1>
           <button
             onClick={() => setShowPlaylist(!showPlaylist)}
-            className="flex items-center gap-1 text-sm text-indigo-600 hover:text-indigo-800 transition-colors"
+            className="flex items-center gap-1 text-sm text-purple-600 hover:text-purple-800 transition-colors"
           >
             <PlaylistIcon />
             <span>{showPlaylist ? 'Hide' : 'Show'} List</span>
@@ -235,12 +235,12 @@ export default function YouTubePlayer() {
         </div>
 
         {showPlaylist && (
-          <div className="mb-6 max-h-60 overflow-y-auto rounded-lg bg-gray-50 border border-gray-200 shadow-inner">
+          <div className="mb-6 max-h-60 overflow-y-auto rounded-lg bg-white/40 border border-white/30 shadow-inner">
             {playlistItems.map((item, index) => (
-              <div key={item.id} className="border-b border-gray-200 last:border-b-0 hover:bg-gray-100 transition-colors">
+              <div key={item.id} className="border-b border-white/20 last:border-b-0 hover:bg-white/50 transition-colors">
                 <button
                   onClick={() => playVideoByIndex(index)}
-                  className="block w-full text-left px-4 py-3 text-sm text-gray-700 truncate"
+                  className="block w-full text-left px-4 py-3 text-sm text-purple-700 truncate"
                 >
                   {item.title}
                 </button>
@@ -251,18 +251,18 @@ export default function YouTubePlayer() {
 
         <div className="mb-6">
           <div className="overflow-x-hidden whitespace-nowrap mb-2">
-            <h2 className="text-lg font-medium text-gray-800 inline-block px-1 animate-marquee">
+            <h2 className="text-lg font-medium text-purple-900 inline-block px-1 animate-marquee">
               {title}
             </h2>
           </div>
-          <br/>
-          <div className="h-2 w-full bg-gray-200 rounded-full mb-1 overflow-hidden">
+          <br />
+          <div className="h-2 w-full bg-purple-100 rounded-full mb-1 overflow-hidden">
             <div
-              className="h-full bg-indigo-500 rounded-full transition-all duration-300"
+              className="h-full bg-purple-500 rounded-full transition-all duration-300"
               style={{ width: duration ? `${(currentTime / duration) * 100}%` : '0%' }}
             />
           </div>
-          <div className="flex justify-between text-xs text-gray-500">
+          <div className="flex justify-between text-xs text-purple-600 font-mono">
             <span>{formatTime(currentTime)}</span>
             <span>{formatTime(duration)}</span>
           </div>
@@ -271,21 +271,21 @@ export default function YouTubePlayer() {
         <div className="flex justify-center items-center gap-4 mb-6">
           <button
             onClick={() => player?.previousVideo?.()}
-            className="p-3 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-full transition-colors"
+            className="p-3 text-purple-600 hover:text-pink-500 hover:bg-white/30 rounded-full transition-colors"
             aria-label="Previous"
           >
             <PreviousIcon />
           </button>
           <button
             onClick={() => playerState === 1 ? player?.pauseVideo?.() : player?.playVideo?.()}
-            className="p-4 bg-indigo-600 text-white hover:bg-indigo-700 rounded-full transition-colors shadow-md hover:shadow-lg"
+            className="p-4 bg-pink-400 text-white hover:bg-pink-500 rounded-full transition-all shadow-md hover:shadow-xl"
             aria-label={playerState === 1 ? 'Pause' : 'Play'}
           >
             {playerState === 1 ? <PauseIcon /> : <PlayIcon />}
           </button>
           <button
             onClick={() => player?.nextVideo?.()}
-            className="p-3 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-full transition-colors"
+            className="p-3 text-purple-600 hover:text-pink-500 hover:bg-white/30 rounded-full transition-colors"
             aria-label="Next"
           >
             <NextIcon />
@@ -303,7 +303,7 @@ export default function YouTubePlayer() {
                 setIsMuted(true);
               }
             }}
-            className="p-2 text-gray-600 hover:text-indigo-600 transition-colors"
+            className="p-2 text-purple-600 hover:text-pink-500 transition-colors"
             aria-label={isMuted ? 'Unmute' : 'Mute'}
           >
             {isMuted ? <VolumeOffIcon /> : <VolumeUpIcon />}
@@ -322,22 +322,23 @@ export default function YouTubePlayer() {
                 player?.unMute?.();
               }
             }}
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+            className="w-full h-2 bg-purple-100 rounded-lg appearance-none cursor-pointer accent-pink-400"
           />
         </div>
 
-        <div className="mt-8 text-center text-sm text-gray-500">
-          Made with <span className="text-red-500">❤️</span> by{' '}
+        <div className="mt-8 text-center text-xs text-purple-600">
+          Made with <span className="text-red-400">❤️</span> by{' '}
           <a
             href="https://bhargav-rathod.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-indigo-600 hover:underline transition-colors"
+            className="text-purple-800 hover:underline"
           >
             Bhargav Rathod
           </a>
         </div>
       </div>
     </div>
+
   );
 }
