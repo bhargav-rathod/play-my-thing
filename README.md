@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎵 YouTube Playlist Player – (Without Ads + In Background)
 
-## Getting Started
+A sleek, modern YouTube playlist player built with **Next.js**, **Tailwind CSS**, and the **YouTube IFrame API** – featuring **pastel gradients**, **glassmorphism**, and **Instagram-inspired typography**.
 
-First, run the development server:
+> 🌐 Live Demo: [https://play-my-yt.netlify.app/](https://play-my-yt.netlify.app/)
+> 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/00ece0a3-e5b0-44f3-a74b-20bd8a0e40ac/deploy-status)](https://app.netlify.com/projects/play-my-yt/deploys)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 📺 Embeds and plays an entire **YouTube playlist**
+- 🎵 Real-time **current track display** with progress bar
+- ⏯️ Playback controls (Play, Pause, Next, Previous)
+- 🔊 Volume and Mute toggle
+- 📜 Expandable playlist viewer with scroll
+- 💅 **Low Weighted Inspired UI**: pastel gradient, glass effect, and shadowed text
+- ⚡ Optimized for **mobile and desktop**
+- 🔁 Automatically fetches and updates the playlist from your `.env`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** [Next.js](https://nextjs.org)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **YouTube Integration:** [YouTube IFrame API](https://developers.google.com/youtube/iframe_api_reference)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 Setup & Development
 
-## Deploy on Vercel
+### 1. Clone the Repository
+### 2. Install Dependencies
+### 3. Set Environment Variables
+### 4. Run & Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🙌 Author
+Made with ❤️ by Bhargav Rathod
