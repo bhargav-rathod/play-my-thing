@@ -54,7 +54,7 @@ const PlaylistIcon = () => (
 );
 
 const MusicNoteIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-5 h-5">
     <path fillRule="evenodd" d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V9.017 5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" clipRule="evenodd" />
   </svg>
 );
@@ -62,7 +62,7 @@ const MusicNoteIcon = () => (
 export default function YouTubePlayer() {
   const [player, setPlayer] = useState<any>(null);
   const [playerState, setPlayerState] = useState(-1);
-  const [title, setTitle] = useState('Not Playing');
+  const [title, setTitle] = useState('Click on play to start listening!');
   const [volume, setVolume] = useState(50);
   const [isMuted, setIsMuted] = useState(false);
   const [isReady, setIsReady] = useState(false);
@@ -71,7 +71,7 @@ export default function YouTubePlayer() {
   const [playlistId, setPlaylistId] = useState(process.env.NEXT_PUBLIC_PLAYLIST_ID || '');
   const [playlistItems, setPlaylistItems] = useState<any[]>([]);
   const [showPlaylist, setShowPlaylist] = useState(false);
-  const [thumbnail, setThumbnail] = useState('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=300&auto=format&fit=crop');
+  const [thumbnail, setThumbnail] = useState('/thumbnail.jpg?q=80&w=300&auto=format&fit=crop');
   const [isPlaying, setIsPlaying] = useState(false);
 
   const playerContainerRef = useRef<HTMLDivElement>(null);
