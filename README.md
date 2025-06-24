@@ -1,6 +1,6 @@
 # 🎵 YouTube Playlist Player – (Without Ads + In Background)
 
-A sleek, modern YouTube playlist player built with **Next.js**, **Tailwind CSS**, and the **YouTube IFrame API** – featuring **pastel gradients**, **glassmorphism**, and **Instagram-inspired typography**.
+A sleek, modern YouTube playlist player built with **Next.js**, **Tailwind CSS**, and the **YouTube IFrame API** – featuring **No Ads** and **Background Media Playback**.
 
 > 🌐 Live Demo: [https://play-my-yt.netlify.app/](https://play-my-yt.netlify.app/)
 > 
@@ -15,7 +15,7 @@ A sleek, modern YouTube playlist player built with **Next.js**, **Tailwind CSS**
 - ⏯️ Playback controls (Play, Pause, Next, Previous)
 - 🔊 Volume and Mute toggle
 - 📜 Expandable playlist viewer with scroll
-- 💅 **Low Weighted Inspired UI**: pastel gradient, glass effect, and shadowed text
+- 💅 **Low Weighted Inspired UI**: Classic, Modern and Easy Usage
 - ⚡ Optimized for **mobile and desktop**
 - 🔁 Automatically fetches and updates the playlist from your `.env`
 
